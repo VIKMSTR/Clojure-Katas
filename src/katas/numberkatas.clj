@@ -6,7 +6,10 @@
 (defn handleEvenBalanced
   "Handles sequence with even amount of items"
   [sequence totalDigits]
-  (if (==(reduce + (take (-(quot totalDigits 2)1) sequence)) (reduce + (take (-(quot totalDigits 2)1) (reverse sequence)))) "Balanced" "Not Balanced")
+  (if (==(reduce +
+                 (take (-(quot totalDigits 2)1) sequence))
+         (reduce +
+                 (take (-(quot totalDigits 2)1) (reverse sequence)))) "Balanced" "Not Balanced")
   )
 
 (defn handleOddBalanced
