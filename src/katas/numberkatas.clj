@@ -24,8 +24,8 @@
     [num]
     (let [converted-digits (digits num)
           total-digits (count converted-digits)]
-      (cond
-        (even? total-digits) (handleEvenBalanced converted-digits total-digits)
-        :else (handleOddBalanced converted-digits total-digits)
+      (if (even? total-digits)
+          (handleEvenBalanced converted-digits total-digits)
+          (handleOddBalanced converted-digits total-digits)
         ))
     )
